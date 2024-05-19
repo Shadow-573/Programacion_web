@@ -1,0 +1,29 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    background: black;
+}
+
+h2{
+    margin-left: 3vh;
+    color: white;
+    font-size: 4vh;
+    border-style: solid;
+    border-bottom: none;
+    border-top: none;
+    border-right: none;
+    padding-left: 1vh;
+}
+
+.console{
+    border-style: solid;
+    border-color: white;
+    background: black;
+}
+
+.console p{
+    color: white;
+    font-size: 3vh;
+    margin-left: 2vh;
+    margin-top: 0px;
+}
+

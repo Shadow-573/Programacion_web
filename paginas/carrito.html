@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/carrito.css">
+
+
+
+
+    <center>
+    </head>
+    <header>
+        <h1>CARRITO DE COMPRAS</h1>
+        Se mostrarán aqui todos los productos que ha comprado.
+    </header>
+
+    <body >
+
+
+        <table>
+            <tr>
+                <td>
+                    <img src="/multimedia/recursos/default_image.png" alt="Peluches" width="256px" height="256px">
+                </td>
+                <td>
+                    <img src="/multimedia/recursos/default_image.png" alt="Peluches" width="256px" height="256px">
+                </td>
+                <td>
+                    <img src="/multimedia/recursos/default_image.png" alt="Peluches" width="256px" height="256px">
+                </td>
+                
+            </tr>
+            <tr>
+                <td>
+                    <img src="/multimedia/recursos/default_image.png" alt="Peluches" width="256px" height="256px">
+                </td>
+                <td>
+                    <img src="/multimedia/recursos/default_image.png" alt="Peluches" width="256px" height="256px">
+                </td>
+                <td>
+                    <img src="/multimedia/recursos/default_image.png" alt="Peluches" width="256px" height="256px">
+                </td>
+                
+            </tr>
+        </table>
+
+        <h2>Total de la compra:</h2>
+        <span>
+            467.000 COP
+        </span>
+
+        <div class="pago">
+
+
+            <input type="radio" name="pago_metodo" value="visa" required>
+          <label for="visa"><img src="/multimedia/recursos/visa_logo.png"></label>
+
+          <input type="radio" name="pago_metodo" value="mastercard" required>
+          <label for="mastercard"><img src="/multimedia/recursos/Mastercard_logo.png"></label>
+
+          <input type="radio" name="apple_pay" value="apple_pay" required>
+          <label for="otro"><img src="/multimedia/recursos/apple_logo.png"></label>
+
+          <input type="radio" name="pago_metodo" value="paypal" required>
+          <label for="otro"><img src="/multimedia/recursos/paypal_logo.png"></label>
+
+          <input type="radio" name="pago_metodo" value="otro" required>
+          <label for="otro">Otro</label>
+
+
+
+
+        </div>
+
+        <form action="/paginas/compra_exitosa.html">
+            <button type="submit" >Confirmar compra</button>
+        </form>
+
+        <footer>
+            &copy; 2024 Neco Fabric - Todos los derechos reservados
+        </footer> 
+    </body>
+    </center>
+</html>

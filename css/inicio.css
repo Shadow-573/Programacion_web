@@ -1,0 +1,98 @@
+*{
+    font-family: sans-serif;
+}
+
+body {
+    background-color: #e6e6e6;
+    text-align: center;
+}
+
+section{
+    min-height: 100vh;
+    padding: 0 9%;
+    padding-top: 1.5rem;
+    padding-bottom: 2rem;
+
+}
+
+.btn{
+    display: inline-block;
+    margin-top: 1rem;
+    padding: .8rem 3rem;
+    border-radius: 5rem;
+    background: #F3A847;
+    font-size: 1.8rem;
+    color: #131921;
+    cursor: pointer;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    transition: all .3s linear;
+    text-decoration: none;
+}
+
+.btn:hover{
+    transform: scale(1.1);
+}
+
+.inicio{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(/multimedia/recursos/fondo_2.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+}
+
+.inicio .image img{
+
+    width: 230px;
+    animation: float 1s linear infinite;
+    margin-left: 1px;
+    
+}
+
+@keyframes float{
+    0%, 100%{
+        transform: translateX(0rem);
+    }
+    50%{
+        transform: translateX(-10.5rem);
+    }
+}
+
+.content{
+    margin-right: 250px;
+
+}
+
+.inicio .content h3{
+    font-size: 35.5px;
+    color: #333;
+    text-transform: uppercase;
+}
+
+.inicio .content h3 span{
+    color: #f08b07;
+    text-transform: uppercase;
+    
+}
+
+.inicio .content p{
+    font-size: 25.7px;
+    color: #666;
+    padding: 1rem 0;
+}
+
+
+
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #131921;
+    color: whitesmoke;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-family: arial, sans-serif;
+}

@@ -1,0 +1,67 @@
+header{
+    background: #df9e26;
+    border-radius: 10px;
+}
+
+.big_div_1{
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin-bottom: 5vh;
+}
+
+.titulo{
+    flex: 1 0 auto;
+    font-size: 3vh;
+    margin-left: 5vh;
+    
+}
+
+.btns button{
+
+    border-radius: 30px;
+    padding: 20px 50px 20px 50px;
+    font-size: 2.3vh;
+    margin-right: 3vh;
+    cursor: pointer;
+    border: 0px;
+}
+
+.cancel:hover{
+
+    background: crimson;
+    color: white;
+}
+
+.save:hover{
+
+    background: green;
+    color: white;
+}
+
+.roles{
+    font-size: 3vh;
+}
+
+table {
+    border: 4px;
+    border-style: solid;
+}
+
+
+.roles table td{
+
+    padding: 5vh;
+    order: 0;
+    flex: 0 1 auto;
+    align-self:auto;
+    height: auto;
+    width: 46%;
+    border-color: #050505;
+    border-style:solid;
+    text-align: center;
+    //background: red;
+    
+}

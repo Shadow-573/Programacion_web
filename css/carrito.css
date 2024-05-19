@@ -1,0 +1,91 @@
+*{
+    font-family: sans-serif;
+}
+
+header {
+    padding: 20px;
+    background-color: #e0b275;
+    border-bottom: 1px solid #ddd;
+}
+
+h2 {
+    margin-top: 20px;
+}
+
+
+main {
+    padding: 20px;
+}
+
+table {
+    margin: 10px auto;
+}
+
+table img {
+    margin: 10%;
+    border: 5px solid #131921;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.pago{
+    padding-bottom: 30px;
+    padding-top: 50px;
+
+}
+
+.pago input{
+    margin-bottom: 10px;
+}
+
+.pago label{
+    font-size: 25px;
+    margin-right: 25px;
+}
+
+.pago img{
+
+    margin-left: 10px;
+    width: 60px;
+    height: 30px;
+    
+}
+
+
+
+
+
+button {
+    padding: 10px 20px;
+    background-color: #f3A847;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 20px 20% 20px 20%;
+    margin-bottom: 5%;
+    font-size: large;
+}
+button:hover{
+    background-color: #da973f ;
+    }
+    
+
+body {
+    background-color: #e6e6e6;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #131921;
+    color: whitesmoke;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-family: arial, sans-serif;
+}
