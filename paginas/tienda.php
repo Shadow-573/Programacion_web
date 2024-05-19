@@ -1,13 +1,19 @@
+<?php
+
+include "nav_menu.php";
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/css/tienda.css">
+    <link rel="stylesheet" href="../css/tienda.css">
 </head>
-<body>
-    <main>
+<main>
         <div class="div_big_1">
             <div class="div_small_1">
                 <p class="filter_info"> Marca </p>
@@ -16,7 +22,7 @@
                 <input class="filter_input" type="text" placeholder="Ingresar..">
                 <p class="product_add"> Productos añadidos </p>
                 <p class="filter_info"> X </p>
-                <form action="/paginas/carrito.html">
+                <form action="../paginas/carrito.html">
                     <button class="carrito_button" type="submit"> Ir al carrito </button>
                 </form>
             </div>
@@ -31,7 +37,7 @@
                         <table>
                             <tr>
                                 <td>
-                                    <img class="product_img" src="/multimedia/peluche.webp" alt="bonnie" width="256px" height="256px">
+                                    <img class="product_img" src="../multimedia/peluche.webp" alt="bonnie" width="256px" height="256px">
                                 </td>     
                                 <td>
                                     <p class="product_info"> Peluche de Neco-Arc Lumina </p>
@@ -46,7 +52,7 @@
                         <table>
                             <tr>
                                 <td>
-                                    <img class="product_img" src="/multimedia/kit.webp" alt="bonnie" width="256px" height="256px">
+                                    <img class="product_img" src="../multimedia/kit.webp" alt="bonnie" width="256px" height="256px">
                                 </td>     
                                 <td>
                                     <p class="product_info"> Peluche de Kit Fortnite </p>
@@ -60,7 +66,7 @@
                         <table>
                             <tr>
                                 <td>
-                                    <img class="product_img" src="/multimedia/meowskulls.jpeg" alt="bonnie" width="256px" height="256px">
+                                    <img class="product_img" src="../multimedia/meowskulls.jpeg" alt="bonnie" width="256px" height="256px">
                                 </td>     
                                 <td>
                                     <p class="product_info"> Peluche de Meowskulls cromatica </p>
@@ -74,7 +80,7 @@
                         <table>
                             <tr>
                                 <td>
-                                    <img class="product_img" src="/multimedia/ponmi.jpg" alt="bonnie" width="256px" height="256px">
+                                    <img class="product_img" src="../multimedia/ponmi.jpg" alt="bonnie" width="256px" height="256px">
                                 </td>     
                                 <td>
                                     <p class="product_info"> Peluche de Ponmi Digital Circus </p>
@@ -89,7 +95,7 @@
                         <table>
                             <tr>
                                 <td>
-                                    <img class="product_img" src="/multimedia/ojolera.webp" alt="bonnie" width="256px" height="256px">
+                                    <img class="product_img" src="../multimedia/ojolera.webp" alt="bonnie" width="256px" height="256px">
                                 </td>     
                                 <td>
                                     <p class="product_info"> Peluche de Freddy Fazbear FNAF 4</p>
@@ -103,7 +109,7 @@
                         <table>
                             <tr>
                                 <td>
-                                    <img class="product_img" src="/multimedia/bonnie.jpg" alt="bonnie" width="256px" height="256px">
+                                    <img class="product_img" src="../multimedia/bonnie.jpg" alt="bonnie" width="256px" height="256px">
                                 </td>     
                                 <td>
                                     <p class="product_info"> Peluche de Bonnie FNAF 1</p>
@@ -174,5 +180,4 @@
             &copy; 2024 Neco Fabric - Todos los derechos reservados
         </center>
     </footer>
-</body>
 </html>

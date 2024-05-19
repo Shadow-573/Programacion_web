@@ -1,15 +1,25 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body{
+  background-color: #131921;
+  
+
+}
 
 header {
   color: whitesmoke;
   background-color: #131921;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  margin: auto;
-  
 
 }
 
 
-ul{
+.nav_div_big_1 .navegador{
 
 margin-top: 0px;
 margin-bottom: 30px;
@@ -18,7 +28,7 @@ padding: 0px;
 
 
 
-.div_big_1{
+.nav_div_big_1{
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -28,7 +38,7 @@ padding: 0px;
   font-size: 37PX;
 }
 
-.div_small_1{
+.nav_div_small_1{
   order: 0;
   flex: 0 1 auto;
   align-self: auto;
@@ -36,13 +46,13 @@ padding: 0px;
   width: 15%;
   
 }
-.div_small_2{
+.nav_div_small_2{
   order: 0;
   position: relative;
   width: 40%;
   text-align: right;
 }
-.div_small_3{ 
+.nav_div_small_3{ 
   order: 0;
   flex: 0 1 auto;
   align-self: center;
@@ -50,6 +60,7 @@ padding: 0px;
   width: 45%;
   text-align: right;
   padding-top: 15px;
+  margin-right: 1vh;
 
 
 }
@@ -57,7 +68,7 @@ padding: 0px;
 
 
 
-ul li{
+.navegador .lista{
   display: inline-block;
   padding: 0px px;
   margin: 0%;
@@ -66,13 +77,13 @@ ul li{
 }
 
 
-nav a {
+.nav_menu_nav .menu_options {
   padding: 25px 1px;
   margin: 0px 7px;
   padding-bottom: 35px;
 }
 
-nav a:hover {
+.nav_menu_nav .menu_options:hover {
   background-color: #555;
   border-radius: 3px;
   padding-top: 13px;
@@ -106,8 +117,7 @@ color: rgb(172, 172, 42);
   
 }
 
-
-input{
+.nav_buscar{
   width: 70%;
   padding: 25px 10px 18px 10px;
   padding-right: 35px;
@@ -160,11 +170,5 @@ input{
 color: whitesmoke;
 font-size: 15px;
 text-decoration: none;
-}
-
-
-
-body{
-  background-color: #131921;
 }
 

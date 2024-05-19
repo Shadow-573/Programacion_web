@@ -5,12 +5,12 @@
     font-family: sans-serif;
 }
 
-body{
+.div_ayuda {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: url(/multimedia/recursos/admin_wallpaper_2.jpg) no-repeat;
+    background: url(../multimedia/recursos/admin_wallpaper_2.jpg) no-repeat;
     background-size: cover;
     background-position: center;
 

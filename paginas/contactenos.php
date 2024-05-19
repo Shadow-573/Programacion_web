@@ -1,10 +1,17 @@
+<?php
+
+include "nav_menu.php";
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/css/contactenos.css">
+    <link rel="stylesheet" href="../css/contactenos.css">
 
     
 </head>
@@ -92,7 +99,7 @@
       <span>Responderemos entre 3 a 4 dias habiles</span>
       <br>
 
-      <img src="/multimedia/recursos/formulario_foto.png" alt="">
+      <img src="../multimedia/recursos/formulario_foto.png" alt="">
     </div>
   </div>
 

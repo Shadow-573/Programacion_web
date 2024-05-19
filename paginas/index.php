@@ -1,10 +1,20 @@
-<!DOCTYPE html>
+<?php
+
+$title="index";
+
+include "nav_menu.php";
+
+?>
+
+
+
+    <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/css/inicio.css">
+    <link rel="stylesheet" href="../css/inicio.css">
 </head>
 
 <section class="inicio" id="inicio">
@@ -22,7 +32,7 @@
     </div>
 
     <div class="image">
-        <img src="/multimedia/neco_dance.gif" alt="">
+        <img src="../multimedia/neco_dance.gif" alt="">
     </div>
 
 
