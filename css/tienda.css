@@ -86,11 +86,11 @@
     //background: blue;
   }
 
-  ul{
+  .producto{
     margin: 0;
     list-style: none;
   }
-  li{
+  .producto li{
     padding-bottom: 5%;
     padding-top: 2%;
   }

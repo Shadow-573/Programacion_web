@@ -1,3 +1,10 @@
+<?php
+
+
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,13 +12,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="/css/admin.css">
+  <link rel="stylesheet" href="../css/admin.css">
 
 
 </head>
 
 <div class="big_div_1">
-  <form action="/admin/admin_tools.html">
+  <form action="../admin/admin_nav.php">
     <h1>Admin</h1>
     <div class="input_datos">
       <input type="text" placeholder="Correo" required>

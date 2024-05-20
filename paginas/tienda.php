@@ -32,7 +32,7 @@ include "nav_menu.php";
     
     
             <div class="div_small_2">
-                <ul>
+                <ul class"producto">
                     <li>
                         <table>
                             <tr>

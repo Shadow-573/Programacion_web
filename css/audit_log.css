@@ -1,9 +1,11 @@
-*{
+.audit_log{
     font-family: Arial, Helvetica, sans-serif;
     background: black;
+    margin-left: 12%;
+    border: solid #fff;
 }
 
-h2{
+.tittle{
     margin-left: 3vh;
     color: white;
     font-size: 4vh;
