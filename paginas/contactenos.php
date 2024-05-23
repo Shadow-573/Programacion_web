@@ -2,6 +2,9 @@
 
 include "nav_menu.php";
 
+#include("../modelo/conexion.php");
+#include("../controlador/controlador_registro_user.php");
+
 ?>
 
 
@@ -23,36 +26,36 @@ include "nav_menu.php";
     <div class="div_small_1">
       <center>
         
-        <form action="https://www.google.com">
+        <form action="" method="post">
       
             <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" required placeholder="ingresar">
+            <input type="text" id="nombre" name="nombre" required placeholder="ingresar">
             <br>
             <br>
     
             <label for="direccion" >Dirección:</label>
-            <input type="text" id="direccion" required placeholder="ingresar">
+            <input type="text" id="direccion" name="direccion" required placeholder="ingresar">
             <br>
             <br>
     
             <label for="correo">Correo:</label>
-            <input type="email" id="correo" required placeholder="ingresar">
+            <input type="email" id="correo" name="correo" required placeholder="ingresar">
             <br>
             <br>
           
             <label for="celular" >Celular:</label>
-            <input type="tel"  id="celular" required placeholder="ingresar">
+            <input type="tel"  id="celular" name="correo" required placeholder="ingresar">
             <br>
             <br>
     
             <label for="pais" >País: </label>
-            <input type="text" id="pais" required placeholder="ingresar">
+            <input type="text" id="pais" name="pais" required placeholder="ingresar">
             <br>
             <br>
     
      
             <label for="file">Seleccione el archivo a cargar:</label>
-            <input type="file"  id="file" required>
+            <input type="file"  id="file">
             <br>
             <br>
     
@@ -65,13 +68,13 @@ include "nav_menu.php";
             <label>Género:</label>
             <br>
     
-              <input type="radio" name="genero" value="masculino" required>
+              <input type="radio" name="genero" value="masculino">
               <label for="masculino">Masculino</label>
     
-              <input type="radio" name="genero" value="femenino" required>
+              <input type="radio" name="genero" value="femenino">
               <label for="femenino">Femenino</label>
     
-              <input type="radio" name="genero" value="otro" required>
+              <input type="radio" name="genero" value="otro">
               <label for="otro">Otro</label>
               <br>
               <br>
