@@ -102,7 +102,7 @@ include "nav_menu.php";
       <span>Responderemos entre 3 a 4 dias habiles</span>
       <br>
 
-      <img src="../multimedia/recursos/formulario_foto.png" alt="">
+      <img src="../recursos/iconos/formulario_foto.png" alt="">
     </div>
   </div>
 

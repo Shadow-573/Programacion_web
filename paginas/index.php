@@ -32,7 +32,7 @@ include "nav_menu.php";
     </div>
 
     <div class="image">
-        <img src="../multimedia/neco_dance.gif" alt="">
+        <img src="../recursos/neco_dance.gif" alt="">
     </div>
 
 

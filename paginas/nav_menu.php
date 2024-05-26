@@ -39,7 +39,7 @@ $menu_items = array(
             <tr>
               <td>
                 <a href="#"></a>
-                <img src="../multimedia/neco_walk.gif" alt="Logo" width="80" height="80">
+                <img src="../recursos/neco_walk.gif" alt="Logo" width="80" height="80">
               </td>
               <td>
                 <button onclick="sonido_burenya()" class="logo_visibility titulo_neco_arc">
@@ -62,7 +62,7 @@ $menu_items = array(
 
         <div class="nav_div_small_2">
           <input class="nav_buscar" type="text" placeholder="Buscar..">
-          <button class="search_button"> <img class="lupa_busqueda" src="../multimedia/recursos/lupa.png" alt="lupa_w">
+          <button class="search_button"> <img class="lupa_busqueda" src="../recursos/iconos/lupa.png" alt="lupa_w">
           </button>
         </div>
 
@@ -81,7 +81,7 @@ foreach ($menu_items as $name => $url) {
     echo "<li class='lista'><a class='menu_options' href=$url>$name</a></li>";
     
 }
-echo "<img src='../multimedia/recursos/shop_cart.png' alt='carrito' width='60' height='30'> </a> </li>";
+echo "<img src='../recursos/iconos/shop_cart.png' alt='carrito' width='60' height='30'> </a> </li>";
 echo '</ul>';
 
         ?>
@@ -99,7 +99,7 @@ echo '</ul>';
             <li> <a class="menu_options" href="contactenos.html" target="formulario">CONCTACTENOS</a> </li>
             <li> <a class="menu_options" href="log_in.html" target="formulario">LOG IN</a> </li>
             <li> <a class="carrito_img" href="carrito.html" target="formulario">
-                <img src="multimedia/recursos/shop_cart.png" alt="carrito" width="60" height="30"> </a> </li>
+                <img src="recursos/iconos/shop_cart.png" alt="carrito" width="60" height="30"> </a> </li>
 
           </ul>
         -->

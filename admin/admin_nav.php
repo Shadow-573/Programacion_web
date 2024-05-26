@@ -26,6 +26,8 @@ $menu_items = array(
 </head>
 <body>
 
+<section>
+    
 <div class="nav_menu">
 
 <div class="admin_title">
@@ -48,11 +50,11 @@ foreach ($menu_items as $name => $url) {
 
 
 
-echo "<li class='admin_lista'><a class='menu_selector' href='roles.php'><img src='../multimedia/recursos/roles.png' alt='' class='iconos'>Roles</a></li>";
-echo "<li class='admin_lista'><a class='menu_selector' href='usuarios.php'><img src='../multimedia/recursos/usuarios.png' alt='' class='iconos'>Usuarios</a></li>";
-echo "<li class='admin_lista'><a class='menu_selector' href='page_manager.php'><img src='../multimedia/recursos/page_admin.png' alt='' class='iconos'>Page admin</a></li>";
-echo "<li class='admin_lista'><a class='menu_selector' href='shop_manager.php'><img src='../multimedia/recursos/shop_manager.png' alt='' class='iconos'>Shop manager</a></li>";
-echo "<li class='admin_lista'><a class='menu_selector' href='audit_log.php'><img src='../multimedia/recursos/log.png' alt='' class='iconos'>Admin Log</a></li>";
+echo "<li class='admin_lista'><a class='menu_selector' href='roles.php'><img src='../recursos/iconos/roles.png' alt='' class='iconos'>Roles</a></li>";
+echo "<li class='admin_lista'><a class='menu_selector' href='usuarios.php'><img src='../recursos/iconos/usuarios.png' alt='' class='iconos'>Usuarios</a></li>";
+echo "<li class='admin_lista'><a class='menu_selector' href='page_manager.php'><img src='../recursos/iconos/page_admin.png' alt='' class='iconos'>Page admin</a></li>";
+echo "<li class='admin_lista'><a class='menu_selector' href='shop_manager.php'><img src='../recursos/iconos/shop_manager.png' alt='' class='iconos'>Shop manager</a></li>";
+echo "<li class='admin_lista'><a class='menu_selector' href='audit_log.php'><img src='../recursos/iconos/log.png' alt='' class='iconos'>Admin Log</a></li>";
 
 echo '</ul>';
 
@@ -60,6 +62,7 @@ echo '</ul>';
         ?>
 
 </div>
+</section>
 
     
 </body>

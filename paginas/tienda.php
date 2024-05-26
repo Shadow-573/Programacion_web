@@ -37,7 +37,7 @@ include "nav_menu.php";
                         <table>
                             <tr>
                                 <td>
-                                    <img class="product_img" src="../multimedia/peluche.webp" alt="bonnie" width="256px" height="256px">
+                                    <img class="product_img" src="../recursos/peluche.webp" alt="bonnie" width="256px" height="256px">
                                 </td>     
                                 <td>
                                     <p class="product_info"> Peluche de Neco-Arc Lumina </p>
@@ -52,7 +52,7 @@ include "nav_menu.php";
                         <table>
                             <tr>
                                 <td>
-                                    <img class="product_img" src="../multimedia/kit.webp" alt="bonnie" width="256px" height="256px">
+                                    <img class="product_img" src="../recursos/kit.webp" alt="bonnie" width="256px" height="256px">
                                 </td>     
                                 <td>
                                     <p class="product_info"> Peluche de Kit Fortnite </p>
@@ -66,7 +66,7 @@ include "nav_menu.php";
                         <table>
                             <tr>
                                 <td>
-                                    <img class="product_img" src="../multimedia/meowskulls.jpeg" alt="bonnie" width="256px" height="256px">
+                                    <img class="product_img" src="../recursos/meowskulls.jpeg" alt="bonnie" width="256px" height="256px">
                                 </td>     
                                 <td>
                                     <p class="product_info"> Peluche de Meowskulls cromatica </p>
@@ -80,7 +80,7 @@ include "nav_menu.php";
                         <table>
                             <tr>
                                 <td>
-                                    <img class="product_img" src="../multimedia/ponmi.jpg" alt="bonnie" width="256px" height="256px">
+                                    <img class="product_img" src="../recursos/ponmi.jpg" alt="bonnie" width="256px" height="256px">
                                 </td>     
                                 <td>
                                     <p class="product_info"> Peluche de Ponmi Digital Circus </p>
@@ -95,7 +95,7 @@ include "nav_menu.php";
                         <table>
                             <tr>
                                 <td>
-                                    <img class="product_img" src="../multimedia/ojolera.webp" alt="bonnie" width="256px" height="256px">
+                                    <img class="product_img" src="../recursos/ojolera.webp" alt="bonnie" width="256px" height="256px">
                                 </td>     
                                 <td>
                                     <p class="product_info"> Peluche de Freddy Fazbear FNAF 4</p>
@@ -109,7 +109,7 @@ include "nav_menu.php";
                         <table>
                             <tr>
                                 <td>
-                                    <img class="product_img" src="../multimedia/bonnie.jpg" alt="bonnie" width="256px" height="256px">
+                                    <img class="product_img" src="../recursos/bonnie.jpg" alt="bonnie" width="256px" height="256px">
                                 </td>     
                                 <td>
                                     <p class="product_info"> Peluche de Bonnie FNAF 1</p>
@@ -139,13 +139,13 @@ include "nav_menu.php";
                     <td>
                         <center>
                             <b>
-                                <img class="peluche-img" src="/multimedia/peluche.webp" alt="Peluches" width="256px" height="256px">
+                                <img class="peluche-img" src="/recursos/peluche.webp" alt="Peluches" width="256px" height="256px">
                                 <h1> 40.000 COP</h1>
         
-                                <img class="peluche-img" src="/multimedia/kit.webp" alt="Peluches" width="256px" height="256px">
+                                <img class="peluche-img" src="/recursos/kit.webp" alt="Peluches" width="256px" height="256px">
                                 <h1> 80.000 COP</h1>
                             
-                                <img class="peluche-img" src="/multimedia/meowskulls.jpeg" alt="Peluches" width="256px" height="256px">
+                                <img class="peluche-img" src="/recursos/meowskulls.jpeg" alt="Peluches" width="256px" height="256px">
                                 <h1> 30.000 COP</h1>
                             </b>  
                         </center>
@@ -159,13 +159,13 @@ include "nav_menu.php";
                     <td>
                        <center>
                         <b>
-                            <img class="peluche-img" src="/multimedia/ponmi.jpg" alt="Peluches" width="256px" height="256px">
+                            <img class="peluche-img" src="/recursos/ponmi.jpg" alt="Peluches" width="256px" height="256px">
                             <h1> 50.000 COP</h1>
                 
-                            <img class="peluche-img" src="/multimedia/ojolera.webp" alt="Peluches" width="256px" height="256px">
+                            <img class="peluche-img" src="/recursos/ojolera.webp" alt="Peluches" width="256px" height="256px">
                             <h1> 60.000 COP</h1>
                 
-                            <img class="peluche-img" src="/multimedia/bonnie.jpg" alt="Peluches" width="256px" height="256px">
+                            <img class="peluche-img" src="/recursos/bonnie.jpg" alt="Peluches" width="256px" height="256px">
                             <h1> 60.000 COP</h1>
                         </b>
                        </center>

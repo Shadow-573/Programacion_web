@@ -98,7 +98,7 @@ include "nav_menu.php";
         <span>"El proceso de envio puede durar 2 semanas"</span>
         <br>
   
-        <img src="../multimedia/recursos/envio_logo.png" alt="">
+        <img src="../recursos/iconos/envio_logo.png" alt="">
       </div>
 
     </div>
