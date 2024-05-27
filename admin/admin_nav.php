@@ -19,14 +19,12 @@ $menu_items = array(
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">9
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../css/admin_tools.css">
+    <link rel="stylesheet" href="../css/admin_nav.css">
 </head>
-<body>
-
-<section>
+<nav>
     
 <div class="nav_menu">
 
@@ -62,67 +60,5 @@ echo '</ul>';
         ?>
 
 </div>
-</section>
-
-    
-</body>
+</nav>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-<!--
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-<div class="div_big_1">
-        <div class="div_small_1">
-
-            <div class="div_mini_title">
-                <h5>Admin</h5>
-            </div>
-            
-            <div class="div_mini_1">
-                <a href="/admin/roles.html"> Roles</a>
-            </div>
-
-            <div class="div_mini_2">
-                <button class="modificar_obj">Usuarios</button>
-            </div>
-
-            <div class="div_mini_3">
-                <button class="eliminar_obj">Page manager</button>
-            </div>
-
-            <div class="div_mini_4">
-                <button class="nothing">Shop manager</button>
-            </div>
-
-            <div class="div_mini_5">
-                <a href="/admin/audit_log.html"> Roles</a>
-            </div>
-
-            <div class="div_mini_6">
-                <button class="salir_cerrar">Salir y cerrar sección	</button>
-            </div>
-
-        </div>
-        
-</body>
-</html>
-
--->

@@ -45,6 +45,11 @@ header{
     font-size: 3vh;
 }
 
+.tabla_fondo{
+    background-color: floralwhite;
+    height: 99vh;
+}
+
 table {
     border: 4px;
     border-style: solid;
@@ -62,6 +67,7 @@ table {
     border-color: #050505;
     border-style:solid;
     text-align: center;
-    //background: red;
+    /*background: red;
+    */
     
 }

@@ -1,0 +1,20 @@
+:root {
+    --primary-bg: #1E1E2F;
+    --primary-text: #FFFFFF;
+    --secondary-bg: #2E2E3F;
+    --secondary-text: #A9A9B5;
+    --accent-main: #5C6BC0;
+    --accent-hover: #3F51B5;
+    --alert: #FF5252;
+}
+    body{
+
+        background-color: var(--primary-bg);
+        width: 81%;
+        /*border: 10px solid;
+        */
+        margin: 0 ;
+        margin-right: 10px;
+        float: right;
+        height: 99vh;
+    }

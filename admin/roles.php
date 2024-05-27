@@ -1,17 +1,24 @@
-<?php
-
-require "admin_nav.php";
-
-?>
-
-
-
-    <link rel="stylesheet" href="../css/roles.css">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
 </head>
-<body>
+<div class="content">
+    <nav>
+        <?php
+        require("admin_nav.php");
+        ?>
+    </nav>
+    </div>
 
-    <header>
-        
+
+<body>
+<main>
+    <link rel="stylesheet" href="../css/roles.css">
+    <div class="tabla_fondo">
+    <header>       
         <div class="big_div_1">
             <div class="titulo">
             
@@ -68,4 +75,12 @@ require "admin_nav.php";
             </tr>
         </table>
     </div>
+    </main>
+</div>
+
 </body>
+
+<link rel="stylesheet" href="../css/ajuste_admin.css">
+
+
+</html>

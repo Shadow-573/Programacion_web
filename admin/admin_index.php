@@ -1,26 +1,56 @@
-<?php
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+</head>
+<div class="content">
+    <nav>
+        <?php
+        require("admin_nav.php");
+        ?>
+    </nav>
+    </div>
 
-require "admin_nav.php";
 
-
-?>
-
-<html>
+<body>
+<link rel="stylesheet" href="../css/audit_log.css">
+<div class="audit_log">
 
 <header>
-<?php
-
-require "admin_nav.php";
-?>
-    
+    <h2 class="tittle">Console log</h2>
 </header>
 
-<?php
+<div class="console">
+
+    <p>C:\Consola\Ejemplo\</p>
+    <p>[@]</p>
+    <p>[@]</p>
+    <p>[@]</p>
+    <p>[@]</p>
+    <p>[@]</p>
+    <p>[@]</p>
+    <p>[@]</p>
+    <p>[@]</p>
+    <p>[@]</p>
+    <p>[@]</p>
+    <p>[@]</p>
+    <p>[@]</p>
+    
+    
+    <!--
+        INSERTE CODIGO DE PHP PARA LA EJECUCION DE CONSOLE
+    -->
+</div>
+    
+</div>
 
 
-require "audit_log.php";
-?>
+    
 
+</body>
 
+<link rel="stylesheet" href="../css/ajuste_admin.css">
 
 </html>

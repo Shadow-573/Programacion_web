@@ -8,11 +8,7 @@
     --alert: #FF5252;
 }
 
-body {
-    background-color: var(--primary-bg);
-    color: var(--primary-text);
-    font-family: 'Arial', sans-serif;
-  }
+
 
   .admin_title{
     border: solid #FFFFFF;
@@ -35,6 +31,9 @@ body {
   }
 
 .nav_menu{
+    background-color: var(--primary-bg);
+    color: var(--primary-text);
+    font-family: 'Arial', sans-serif;
 
     height: 100%;
     width: 220px;
@@ -45,6 +44,10 @@ body {
     background-color: var(--primary-bg);
     overflow-x: hidden;
     padding-top: 20px;
+    border: solid white;
+    border-top: none;
+    border-left: none;
+    border-bottom: none;
 }
 
 .admin_lista{
