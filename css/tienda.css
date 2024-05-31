@@ -23,6 +23,7 @@
     border-top: none;
     padding-top: 1%;
     text-align: center;
+    border-bottom: none;
     //background: red;
 
   }
@@ -83,6 +84,7 @@
     border-color: #050505;
     border-style:solid;
     border-top: none;
+    border-bottom: none;
     //background: blue;
   }
 
@@ -137,7 +139,7 @@ body {
     font-family: Arial, sans-serif;
 }
 
-footer {
+/*footer {
     text-align: center;
     padding: 10px;
     background-color: #131921;
@@ -146,38 +148,5 @@ footer {
     bottom: 0;
     width: 100%;
 }
-
-/*
-.peluche-img{
-    border-radius: 20px;
-    padding: 10px;
-    border: 5px solid #131921;
-}
-    
-
-
-main {
-    text-align: center;
-    padding: 20px;
-}
-
-.content {
-    margin-bottom: 20px;
-}
-
-.products {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-.product-group {
-    margin-bottom: 20px;
-}
-
-.product-group img {
-    display: block;
-    margin: 0 auto;
-    border: 10px solid #0a0909; 
-}
 */
+

@@ -13,8 +13,8 @@
         <table border="1">
             <tr>
                 <td>ID</td>
-                <td>NOMBRES</td>
-                <td>APELLIDOS</td>
+                <td>NOMBRE</td>
+                <td>CORREO</td>
                 <td>OPCIONES</td>
 
             </tr>

@@ -46,12 +46,6 @@ include "nav_menu.php";
 
   </form>
 </div>
-
-
-<footer>
-  &copy; 2024 Neco Fabric - Todos los derechos reservados
-</footer> 
-
 </body>
 
 </div>

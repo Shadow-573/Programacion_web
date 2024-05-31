@@ -125,59 +125,9 @@ include "nav_menu.php";
         </div>
     </main>
     
-    <!--
-    <main>
-        <center>
-            <h1>Nuestros Peluches</h1>
-            <p>En Neco Fabric nos especializamos en ofrecer una amplia variedad de peluches para todas las edades y ocasiones.
-                Desde ositos clásicos hasta personajes de películas y series, tenemos algo para todos.</p>
-        </center>
 
-            <center>     
-            <table>
-                <tr>
-                    <td>
-                        <center>
-                            <b>
-                                <img class="peluche-img" src="/recursos/peluche.webp" alt="Peluches" width="256px" height="256px">
-                                <h1> 40.000 COP</h1>
-        
-                                <img class="peluche-img" src="/recursos/kit.webp" alt="Peluches" width="256px" height="256px">
-                                <h1> 80.000 COP</h1>
-                            
-                                <img class="peluche-img" src="/recursos/meowskulls.jpeg" alt="Peluches" width="256px" height="256px">
-                                <h1> 30.000 COP</h1>
-                            </b>  
-                        </center>
-                    </td>
-                    <td>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       
-                    </td>
-                    <td>
-                       <center>
-                        <b>
-                            <img class="peluche-img" src="/recursos/ponmi.jpg" alt="Peluches" width="256px" height="256px">
-                            <h1> 50.000 COP</h1>
-                
-                            <img class="peluche-img" src="/recursos/ojolera.webp" alt="Peluches" width="256px" height="256px">
-                            <h1> 60.000 COP</h1>
-                
-                            <img class="peluche-img" src="/recursos/bonnie.jpg" alt="Peluches" width="256px" height="256px">
-                            <h1> 60.000 COP</h1>
-                        </b>
-                       </center>
-                    </td>
-                </tr>
-            </table>
-            </center>
-    </main>
-    -->
-    <footer>
-        <center>
-            &copy; 2024 Neco Fabric - Todos los derechos reservados
-        </center>
-    </footer>
+    <?php
+    include("../paginas/footer.php");
+    ?>
+ 
 </html>

@@ -106,11 +106,10 @@ include "nav_menu.php";
     </div>
   </div>
 
-  <footer>
-    <center>
-        &copy; 2024 Neco Fabric - Todos los derechos reservados
-    </center>
-</footer>
+  <?php
+include ("../paginas/footer.php");
+?>
+
 
 </body>
 </html>

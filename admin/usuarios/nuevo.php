@@ -14,11 +14,11 @@
                 <td>Ingresar Datos:</td>
             </tr>
             <tr>
-                <td>NOMBRES:</td>
+                <td>NOMBRE:</td>
                 <td><input type="text" name="nom" id=""></td>
             </tr>
             <tr>
-                <td>APELLIDOS:</td>
+                <td>CORREO:</td>
                 <td><input type="text" name="ape" id=""></td>
             </tr>
             <tr>

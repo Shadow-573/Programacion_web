@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin</title>
+    <link rel="stylesheet" href="../css/usuarios.css">
+
 </head>
 <div class="content">
     <nav>
@@ -31,8 +33,8 @@
         <table border="1">
             <tr>
                 <td>ID</td>
-                <td>NOMBRES</td>
-                <td>APELLIDOS</td>
+                <td>NOMBRE</td>
+                <td>CORREO</td>
                 <td>OPCIONES</td>
             </tr>
             <?php

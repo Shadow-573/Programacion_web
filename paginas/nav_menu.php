@@ -81,15 +81,10 @@ foreach ($menu_items as $name => $url) {
     echo "<li class='lista'><a class='menu_options' href=$url>$name</a></li>";
     
 }
-echo "<img src='../recursos/iconos/shop_cart.png' alt='carrito' width='60' height='30'> </a> </li>";
+echo "<a class='empty' href='../paginas/carrito.html'> <img src='../recursos/iconos/shop_cart.png' alt='carrito' width='60' height='30'></a></li>";
 echo '</ul>';
 
         ?>
-
-
-
-
-
         <!--
 
           <ul class="navegador">

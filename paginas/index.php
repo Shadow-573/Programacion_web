@@ -32,7 +32,7 @@ include "nav_menu.php";
     </div>
 
     <div class="image">
-        <img src="../recursos/neco_dance.gif" alt="">
+        <img src="../recursos/venti_peluche.png" alt="">
     </div>
 
 
@@ -41,9 +41,9 @@ include "nav_menu.php";
 
 </section>
 
-<footer>
-    &copy; 2024 Neco Fabric - Todos los derechos reservados
-</footer> 
+<?php
+include ("../paginas/footer.php");
+?>
 
 
 </html>

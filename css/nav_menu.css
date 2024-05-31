@@ -172,3 +172,9 @@ font-size: 15px;
 text-decoration: none;
 }
 
+.empty{
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+
