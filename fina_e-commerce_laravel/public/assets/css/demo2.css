@@ -1741,6 +1741,8 @@ span {
       .timer-style-2 ul li h5 {
         font-size: 13px; } }
 
+
+
 .timer-style-3 {
   position: absolute;
   top: 50%;
@@ -5060,7 +5062,7 @@ header .main-navbar {
       max-width: 100%; } }
 
 /* =====================
-    Slick SLider CSS Start 
+    Slick SLider CSS Start
  ========================== */
 .box-arrow .slick-prev {
   left: calc(5px + (25 - 5) * ((100vw - 320px) / (1920 - 320)));
@@ -6843,6 +6845,8 @@ footer .footer-newsletter h3 {
 footer .footer-newsletter p {
   line-height: 1.6;
   letter-spacing: .03em; }
+
+
 
 footer .footer-newsletter .input-group input {
   border-radius: 0;
