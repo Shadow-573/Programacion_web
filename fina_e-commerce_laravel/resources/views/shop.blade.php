@@ -24,7 +24,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <h3>Shop</h3>
+                    <h3>Tienda</h3>
                     <nav>
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item">
@@ -32,7 +32,7 @@
                                     <i class="fas fa-home"></i>
                                 </a>
                             </li>
-                            <li class="breadcrumb-item active" aria-current="page">Shop</li>
+                            <li class="breadcrumb-item active" aria-current="page">Tienda</li>
                         </ol>
                     </nav>
                 </div>
@@ -53,7 +53,7 @@
                                 <h2 class="accordion-header" id="headingTwo">
                                     <button class="accordion-button" type="button" data-bs-toggle="collapse"
                                         data-bs-target="#collapseTwo">
-                                        Brand
+                                        Series
                                     </button>
                                 </h2>
                                 <div id="collapseTwo" class="accordion-collapse collapse show"
@@ -219,7 +219,7 @@
                             <div class="accordion-item category-price">
                                 <h2 class="accordion-header" id="headingFour">
                                     <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseFour">Price</button>
+                                        data-bs-target="#collapseFour">Precio</button>
                                 </h2>
                                 <div id="collapseFour" class="accordion-collapse collapse show"
                                     aria-labelledby="headingFour" data-bs-parent="#accordionExample">
@@ -235,7 +235,7 @@
                                 <h2 class="accordion-header" id="headingFive">
                                     <button class="accordion-button" type="button" data-bs-toggle="collapse"
                                         data-bs-target="#collapseFive">
-                                        Size
+                                        Tamaño
                                     </button>
                                 </h2>
 
@@ -270,7 +270,7 @@
                                 <h2 class="accordion-header" id="headingOne">
                                     <button class="accordion-button" type="button" data-bs-toggle="collapse"
                                         data-bs-target="#collapseSix">
-                                        Category
+                                        Categoria
                                     </button>
                                 </h2>
                                 <div id="collapseSix" class="accordion-collapse collapse show"
@@ -340,7 +340,7 @@
                                 <h2 class="accordion-header" id="headingSeven">
                                     <button class="accordion-button" type="button" data-bs-toggle="collapse"
                                         data-bs-target="#collapseSeven">
-                                        Discount Range
+                                        Rango de descuento
                                     </button>
                                 </h2>
                                 <div id="collapseSeven" class="accordion-collapse collapse show"
@@ -396,20 +396,20 @@
                                     <div class="page-view-filter">
                                         <div class="dropdown select-featured">
                                             <select class="form-select" name="orderby" id="orderby">
-                                                <option value="-1" selected="">Default</option>
-                                                <option value="1">Date, New To Old</option>
-                                                <option value="2">Date, Old To New</option>
-                                                <option value="3">Price, Low To High</option>
-                                                <option value="4">Price, High To Low</option>
+                                                <option value="-1" selected="">Por defecto</option>
+                                                <option value="1">Fecha, Nuevo a Viejo</option>
+                                                <option value="2">Fecha, Viejo a Nuevo</option>
+                                                <option value="3">Precio, Bajo a Alto</option>
+                                                <option value="4">Precio, Alto a Bajo</option>
                                             </select>
                                         </div>
                                     </div>
                                     <div class="dropdown select-featured">
                                         <select class="form-select" name="size" id="pagesize">
-                                            <option value="12" selected="">12 Products Per Page</option>
-                                            <option value="24">24 Products Per Page</option>
-                                            <option value="52">52 Products Per Page</option>
-                                            <option value="100">100 Products Per Page</option>
+                                            <option value="12" selected="">12 Productos Por Pagina</option>
+                                            <option value="24">24 Productos Por Pagina</option>
+                                            <option value="52">52 Productos Por Pagina</option>
+                                            <option value="100">100 Productos Por Pagina</option>
                                         </select>
                                     </div>
                                 </div>
@@ -451,7 +451,7 @@
                         class="row g-sm-4 g-3 row-cols-lg-4 row-cols-md-3 row-cols-2 mt-1 custom-gy-5 product-style-2 ratio_asos product-list-section">
 
                         @foreach ( $products as $product )
-                        
+
                         <div>
                             <div class="product-box">
                                 <div class="img-wrapper">
@@ -561,28 +561,4 @@
         </div>
     </section>
     <!-- Shop Section end -->
-    <!-- Subscribe Section Start -->
-    <section class="subscribe-section section-b-space">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-md-6">
-                    <div class="subscribe-details">
-                        <h2 class="mb-3">Subscribe Our News</h2>
-                        <h6 class="font-light">Subscribe and receive our newsletters to follow the news about our fresh
-                            and fantastic Products.</h6>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 mt-md-0 mt-3">
-                    <div class="subsribe-input">
-                        <div class="input-group">
-                            <input type="text" class="form-control subscribe-input" placeholder="Your Email Address">
-                            <button class="btn btn-solid-default" type="button">Button</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Subscribe Section End -->
 @endsection
