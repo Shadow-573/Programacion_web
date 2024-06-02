@@ -147,8 +147,8 @@
                                                     </span>
                                                 </div>
                                             </li>
-                                            <li><a href="index.htm" class="nav-link menu-title">Inicio</a></li>
-                                            <li><a href="shop.html" class="nav-link menu-title">Tienda</a></li>
+                                            <li><a href="{{ route('app.index') }}" class="nav-link menu-title">Inicio</a></li>
+                                            <li><a href="{{ route('shop.index') }}" class="nav-link menu-title">Tienda</a></li>
                                             <li><a href="cart/list.html" class="nav-link menu-title">Carrito</a></li>
                                             <li><a href="about-us.html" class="nav-link menu-title">Nosotros</a></li>
                                             <li><a href="contact-us.html" class="nav-link menu-title">Contactenos</a>
