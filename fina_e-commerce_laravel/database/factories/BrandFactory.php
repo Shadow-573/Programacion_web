@@ -22,7 +22,7 @@ class BrandFactory extends Factory
         return [
             'name' => Str::title($brand_name),
             'slug'=> $slug,
-            'image' => $this->faker->numberBetween(1,6).'jpg'
+            'image' => $this->faker->numberBetween(1,6).'.png'
         ];
     }
 }

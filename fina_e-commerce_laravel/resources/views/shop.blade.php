@@ -2,6 +2,17 @@
 
 @push('styles')
     <link id="color-link" rel="stylesheet" type="text/css" href="assets/css/demo2.css">
+    <style>
+        nav svg{
+            height: 20px;
+        }
+
+        .product-box .product-details h5{
+            width: 100%;
+        }
+    </style>
+
+
 @endpush
 
 
@@ -456,13 +467,13 @@
                             <div class="product-box">
                                 <div class="img-wrapper">
                                     <div class="front">
-                                        <a href="product/nihil-beatae-sit-sed.html">
+                                        <a href="{{ route('shop.product.details', ['slug'=>$product->slug]) }}">
                                             <img src="assets/images/fashion/product/front/{{$product->image}}"
                                                 class="bg-img blur-up lazyload" alt="">
                                         </a>
                                     </div>
                                     <div class="back">
-                                        <a href="product/nihil-beatae-sit-sed.html">
+                                        <a href="{{ route('shop.product.details', ['slug'=>$product->slug]) }}">
                                             <img src="assets/images/fashion/product/back/{{$product->image}}"
                                                 class="bg-img blur-up lazyload" alt="">
                                         </a>
@@ -509,14 +520,25 @@
                                         </ul>
                                     </div>
                                     <div class="main-price">
-                                        <a href="product/nihil-beatae-sit-sed.html" class="font-default">
+                                        <a href="{{ route('shop.product.details', ['slug'=>$product->slug]) }}" class="font-default">
                                             <h5 class="ms-0">{{ $product->name }}</h5>
                                         </a>
                                         <div class="listing-content">
                                             <span class="font-light">{{ $product->category->name }}</span>
                                             <p class="font-light">{{ $product->short_description }}</p>
                                         </div>
-                                        <h3 class="theme-color">${{ $product->regular_price }}</h3>
+                                        <h3 class="theme-color">
+                                            @if ($product->sale_price)
+                                                ${{ $product->sale_price }} 
+                                            
+                                            @else
+
+                                                ${{ $product->regular_price }}
+
+
+                                            @endif
+                                        
+                                        </h3>
                                         <button class="btn listing-content">Add To Cart</button>
                                     </div>
                                 </div>
@@ -526,35 +548,9 @@
 
 
                     </div>
-                    <nav class="page-section">
-                        <ul class="pagination">
-                            <li class="page-item">
-                                <a class="page-link" href="javascript:void(0)" aria-label="Previous"
-                                    style="color:#6c757d;">
-                                    <span aria-hidden="true">
-                                        <i class="fas fa-chevron-left"></i>
-                                    </span>
-                                </a>
-                            </li>
 
-
-                            <li class="page-item active">
-                                <a class="page-link" href="javascript:void(0)">1</a>
-                            </li>
-                            <li class="page-item">
-                                <a class="page-link" href="shop-1.html?page=2">2</a>
-                            </li>
-
-                            <li class="page-item">
-                                <a href="shop-1.html?page=2" class="page-link" aria-label="Next">
-                                    <span aria-hidden="true">
-                                        <i class="fas fa-chevron-right"></i>
-                                    </span>
-                                </a>
-                            </li>
-
-                        </ul>
-                    </nav>
+                    {{$products->links("pagination.default")}}
+                    
 
                 </div>
             </div>
