@@ -174,17 +174,18 @@
                                             </a>
                                         </div>
                                     </li>
-                                    <li class="onhover-dropdown wislist-dropdown">
-                                        <div class="cart-media">
-                                            <a href="cart/list.html">
-                                                <i data-feather="shopping-cart"></i>
-                                                <span id="cart-count" class="label label-theme rounded-pill">
-                                                    0
-                                                </span>
-                                            </a>
-                                        </div>
-                                    </li>
-                                    <li class="onhover-dropdown">
+                                    
+                                        <li class="onhover-dropdown wislist-dropdown">
+        <div class="cart-media">
+            <a href="{{route('cart.index')}}">
+                <i data-feather="shopping-cart"></i>
+                <span id="cart-count" class="label label-theme rounded-pill">
+                    {{Cart::instance('cart')->content()->count()}}
+                </span>
+            </a>
+        </div>
+    </li>
+                                        <li class="onhover-dropdown">
                                         <div class="cart-media name-usr">
                                             @auth <span>{{ Auth::user()->name}} </span>  @endauth <i data-feather="user"></i>
                                         </div>
