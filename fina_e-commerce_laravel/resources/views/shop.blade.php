@@ -107,7 +107,7 @@
                             </div>
                         </div>
 
-                        
+
                     </div>
                 </div>
             </div>
@@ -193,7 +193,7 @@
                                 <div class="cart-wrap">
                                     <ul>
                                         <li>
-                                            <a href="javascript:void(0)" class="addtocart-btn">
+                                            <a href="javascript:void(0)" class="addtocart-btn" onclick="event.preventDefault();document.getElementById('addtocart').submit();">
                                                 <i data-feather="shopping-cart"></i>
                                             </a>
                                         </li>
@@ -203,7 +203,7 @@
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="javascript:void(0)" class="wishlist">
+                                            <a href="javascript:void(0)" onclick="addProductToWishList({{$product->id}}, '{{ $product->name }}', 1, {{$product->regular_price}})" class="wishlist">
                                                 <i data-feather="heart"></i>
                                             </a>
                                         </li>
@@ -287,10 +287,10 @@
             $("#frmFilter").submit();
         });
 
-        $("#orderby").on("change",function(){
-                $("#order").val($("#orderby option:selected").val());
-                $("#frmFilter").submit();
-            });
+        $("#orderby").on("change", function() {
+            $("#order").val($("#orderby option:selected").val());
+            $("#frmFilter").submit();
+        });
     })
 
     function filterProductsByBrand(brand) {
@@ -306,19 +306,54 @@
         $("#frmFilter").submit();
     }
 
-    function filterProductsByCategory(brand){
-    var categories = "";
-    $("input[name='categories']:checked").each(function(){
-        if(categories=="")
-        {
-            categories += this.value;
-        }
-        else{
-            categories += "," + this.value;
-        }
-    });
-    $("#categories").val(categories);
-    $("#frmFilter").submit();
-}
+    function filterProductsByCategory(brand) {
+        var categories = "";
+        $("input[name='categories']:checked").each(function() {
+            if (categories == "") {
+                categories += this.value;
+            } else {
+                categories += "," + this.value;
+            }
+        });
+        $("#categories").val(categories);
+        $("#frmFilter").submit();
+    }
+
+    function addProductToWishList(id, name, quantity, price) {
+        $.ajax({
+            type: 'POST',
+            url: "{{ route('wishlist.store') }}",
+            data: {
+                "_token": "{{ csrf_token() }}",
+                id: id,
+                name: name,
+                quantity: quantity,
+                price: price
+            },
+            success: function(data) {
+                if (data.status == 200) {
+                    getCartAndWishListCount();
+                    $.notify({
+                        icon: "fa fa-check",
+                        title: "Success!",
+                        message: "Item succesfully added to your wishlist!"
+                    });
+                }
+            }
+        });
+    }
+
+    function getCartAndWishListCount(){
+        $.ajax({
+            type:"GET",
+            url:"{{ route('shop.cart.wishlist.count') }}",
+            success:function(data){
+                if(data.status==200){
+                    $("#cart-count").html(data.cartCount);
+                    $("#wishlist-count").html(data.wishlistCount);
+                }
+            }
+        })
+    }
 </script>
 @endpush

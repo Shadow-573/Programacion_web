@@ -5,6 +5,8 @@ use App\Http\Controllers\AppController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\ShopController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\WishListController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -26,6 +28,12 @@ Route::post('/cart/store', [CartController::class, 'addToCart'])->name('cart.sto
 Route::put('/cart/update', [CartController::class, 'updateCart'])->name('cart.update');
 Route::delete('/cart/remove', [CartController::class, 'removeItem'])->name('cart.remove');
 Route::delete('/cart/clear', [CartController::class, 'clearCart'])->name('cart.clear');
+Route::post('/wishlist/add', [WishListController::class,'addProductToWishList'])->name('wishlist.store');
+Route::get('/cart-wishlist-count',[ShopController::class,'getCartAndWishListCount'])->name('shop.cart.wishlist.count');
+Route::get('/wishlist',[WishlistController::class,'getWishlistedProducts'])->name('wishlist.list');
+Route::delete('/wishlist/remove',[WishlistController::class,'removeProductFromWishlist'])->name('wishlist.remove');
+Route::delete('/wishlist/clear',[WishlistController::class,'clearWishlist'])->name('wishlist.clear');
+Route::post('/wishlist/move-to-cart',[WishlistController::class,'moveToCart'])->name('wishlist.move.to.cart');
 
 Auth::routes();
 
