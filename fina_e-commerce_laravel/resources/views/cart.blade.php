@@ -51,7 +51,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach ($cartItems as $item)                                                   
+                        @foreach ($cartItems as $item)
                         <tr>
                             <td>
                                 <a href="{{route('shop.product.details',['slug'=>$item->model->slug])}}">
@@ -99,14 +99,14 @@
         <i class="fas fa-times"></i>
     </a>
 </td>
-                        </tr>                       
+                        </tr>
                         @endforeach
                     </tbody>
                 </table>
             </div>
             <div class="col-12 mt-md-5 mt-4">
                 <div class="row">
-                    
+
 <div class="col-sm-7 col-5 order-1">
     <div class="left-side-button text-end d-flex d-block justify-content-end">
         <a href="javascript:void(0)" onclick="clearCart()" class="text-decoration-underline theme-color d-block text-capitalize">clear all items</a>
@@ -124,16 +124,7 @@
             <div class="cart-checkout-section">
                 <div class="row g-4">
                     <div class="col-lg-4 col-sm-6">
-                        <div class="promo-section">
-                            <form class="row g-3">
-                                <div class="col-7">
-                                    <input type="text" class="form-control" id="number" placeholder="Coupon Code">
-                                </div>
-                                <div class="col-5">
-                                    <button class="btn btn-solid-default rounded btn">Apply Coupon</button>
-                                </div>
-                            </form>
-                        </div>
+
                     </div>
 
                     <div class="col-lg-4 col-sm-6 ">
@@ -187,7 +178,7 @@
 </form>
 <form id="clearCart" action="{{route('cart.clear')}}" method="post">
     @csrf
-    @method('delete') 
+    @method('delete')
 </form>
 @endsection
 @push('scripts')
@@ -197,13 +188,13 @@
             $('#rowId').val($(qty).data('rowid'));
             $('#quantity').val($(qty).val());
             $('#updateCartQty').submit();
-        }      
+        }
 
         function removeItemFromCart(rowId)
         {
             $('#rowId_D').val(rowId);
             $('#deleteFromCart').submit();
-        }       
+        }
 
         function clearCart()
         {

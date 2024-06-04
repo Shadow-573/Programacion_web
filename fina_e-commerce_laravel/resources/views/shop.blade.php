@@ -172,7 +172,7 @@
                 </div>
                 <!-- label and featured section -->
 
-                <!-- Prodcut setion -->
+                <!-- Product setion -->
                 <div class="row g-sm-4 g-3 row-cols-lg-4 row-cols-md-3 row-cols-2 mt-1 custom-gy-5 product-style-2 ratio_asos product-list-section">
 
                     @foreach ( $products as $product )
@@ -193,12 +193,12 @@
                                 <div class="cart-wrap">
                                     <ul>
                                         <li>
-                                            <a href="javascript:void(0)" class="addtocart-btn" onclick="event.preventDefault();document.getElementById('addtocart').submit();">
+                                            <a href="javascript:void(0)" class="addtocart-btn" onclick="addProductToCart({{$product->id}}, 1)" class="cart">
                                                 <i data-feather="shopping-cart"></i>
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="javascript:void(0)">
+                                            <a href="{{ route('shop.product.details', ['slug'=>$product->slug]) }}">
                                                 <i data-feather="eye"></i>
                                             </a>
                                         </li>
@@ -342,6 +342,40 @@
             }
         });
     }
+
+    function addProductToCart(id,quantity) {
+        $.ajax({
+            type: 'POST',
+            url: "{{ route('cart.store') }}",
+            data: {
+                "_token": "{{ csrf_token() }}",
+                id: id,
+                quantity: quantity
+            },
+            success: function(data) {
+                if (data.status == 200) {
+                    getCartAndWishListCount();
+                    $.notify({
+                        icon: "fa fa-check",
+                        title: "Success!",
+                        message: "Item succesfully added to your cart!"
+                    });
+                }
+            }
+        });
+    }
+
+
+
+
+
+
+
+
+
+
+
+
 
     function getCartAndWishListCount(){
         $.ajax({

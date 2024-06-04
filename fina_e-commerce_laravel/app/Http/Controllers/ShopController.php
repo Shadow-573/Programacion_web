@@ -48,7 +48,7 @@ class ShopController extends Controller
         $brands = Brand::orderBy('name', 'ASC')->get();
         $q_brands = $request->query("brands");
         $categories = Category::orderBy("name","ASC")->get();
-        $q_categories = $request->query("categories");  
+        $q_categories = $request->query("categories");
         $products = Product::where(function ($query) use ($q_brands) {
             $query->whereIn('brand_id', explode(',', $q_brands))->orWhereRaw("'" . $q_brands . "'=''");
         })
@@ -63,7 +63,7 @@ class ShopController extends Controller
     public function productDetails($slug)
     {
         $product = Product::where('slug', $slug)->first();
-        $rproducts = Product::where('slug', '!=', $slug)->inRandomOrder('id')->get()->take(8);
+        $rproducts = Product::where('slug', '!=', $slug)->inRandomOrder('id')->get()->take(2);
         return view('details', ['product' => $product, 'rproducts' => $rproducts]);
     }
 

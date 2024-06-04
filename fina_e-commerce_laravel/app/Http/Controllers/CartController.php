@@ -28,8 +28,16 @@ class CartController extends Controller
 
     public function updateCart(Request $request)
     {
-        Cart::instance('cart')->update($request->rowId, $request->quantity);
-        return redirect()->route('cart.index');
+        if($request->quantity>0){
+            Cart::instance('cart')->update($request->rowId, $request->quantity);
+            return redirect()->route('cart.index');
+        }
+        else
+        {
+            Cart::instance('cart')->update($request->rowId, 1);
+            return redirect()->route('cart.index');
+        }
+
     }
 
     public function removeItem(Request $request)
