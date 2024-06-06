@@ -1,6 +1,5 @@
 @extends('layouts.base')
 @section('content')
-
 @push('styles')
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -48,12 +47,12 @@
                     </li>
 
                     <li class="nav-item mb-2">
-                        <button class="nav-link font-light" id="2-tab" data-bs-toggle="tab" data-bs-target="#wishlist" type="button"><i class="fas fa-angle-right"></i>Wishlist</button>
+                        <button class="nav-link font-light" id="2-tab" data-bs-toggle="tab" data-bs-target="#wishlist" type="button"><i class="fas fa-angle-right"></i>Categories</button>
                     </li>
 
                     <li class="nav-item mb-2">
-                        <button class="nav-link font-light" id="3-tab" data-bs-toggle="tab" data-bs-target="#save" type="button"><i class="fas fa-angle-right"></i>Saved
-                            Address</button>
+                        <button class="nav-link font-light" id="3-tab" data-bs-toggle="tab" data-bs-target="#save" type="button"><i class="fas fa-angle-right"></i>
+                            Users</button>
                     </li>
 
                     <li class="nav-item mb-2">
@@ -201,7 +200,7 @@
                             <h3>Products</h3>
                         </div>
                         <div class="table-responsive">
-                                <a href="{{route('admin.products.create')}}" class="btn btn-success float-right "> 
+                                <a href="{{route('admin.products.create')}}" class="btn btn-success float-right "> Add
                         <i class="fas fa-plus "></i> <!-- Agrega el icono -->
                         Product</a>
                             <table class="table cart-table">
@@ -258,140 +257,44 @@
 
                     <div class="tab-pane fade table-dashboard dashboard wish-list-section" id="wishlist">
                         <div class="box-head mb-3">
-                            <h3>My Wishlish</h3>
+                            <h3>Categories</h3>
                         </div>
                         <div class="table-responsive">
+                        <a href="{{route('admin.categories.create')}}" class="btn btn-success float-right "> 
+                        <i class="fas fa-plus "></i> <!-- Agrega el icono -->
+                        Add Category</a>
                             <table class="table cart-table">
                                 <thead>
                                     <tr class="table-head">
-                                        <th scope="col">image</th>
-                                        <th scope="col">Order Id</th>
-                                        <th scope="col">Product Details</th>
-                                        <th scope="col">Price</th>
-                                        <th scope="col">Action</th>
+                                        <th scope="col">ID</th>
+                                        <th scope="col">Name</th>
+                                        <th scope="col">Slug</th>
+                                        <th scope="col">Image</th>
+                                        <th scope="col">Actions</th>
+
                                     </tr>
                                 </thead>
                                 <tbody>
+                                @foreach ($categories as $category)
                                     <tr>
+                                        <td>{{ $category->id }}</td>
+                                        <td>{{ $category->name }}</td>
+                                        <td >{{ $category->slug }}</td>
+                                        <td >{{ $category->image }}</td>
                                         <td>
-                                            <a href="details.php">
-                                                <img src="assets/images/fashion/product/front/1.jpg" class="blur-up lazyload" alt="">
+                                            <a href="{{ route('admin.categories.edit', ['id' => $category->id]) }}" class="btn btn-sm btn-primary action-btn">
+                                                <i class="fas fa-edit"></i>
                                             </a>
-                                        </td>
-                                        <td>
-                                            <p class="m-0">#125021</p>
-                                        </td>
-                                        <td>
-                                            <p class="fs-6 m-0">Outwear & Coats</p>
-                                        </td>
-                                        <td>
-                                            <p class="theme-color fs-6">$49.54</p>
-                                        </td>
-                                        <td>
-                                            <a href="cart.php" class="btn btn-solid-default btn-sm fw-bold">Move to
-                                                Cart</a>
+                                            <form action="{{ route('admin.categories.destroy', ['id' => $category->id]) }}" method="POST" style="display:inline;">
+                                                @csrf
+                                                @method('DELETE')
+                                                <button type="submit" class="btn btn-sm btn-danger action-btn">
+                                                    <i class="fas fa-trash-alt"></i>
+                                                </button>
+                                            </form>
                                         </td>
                                     </tr>
-                                    <tr>
-                                        <td>
-                                            <a href="details.php">
-                                                <img src="assets/images/fashion/product/front/2.jpg" class="blur-up lazyload" alt="">
-                                            </a>
-                                        </td>
-                                        <td>
-                                            <p class="m-0">#125367</p>
-                                        </td>
-                                        <td>
-                                            <p class="fs-6 m-0">Outwear & Coats</p>
-                                        </td>
-                                        <td>
-                                            <p class="theme-color fs-6">$49.54</p>
-                                        </td>
-                                        <td>
-                                            <a href="cart.php" class="btn btn-solid-default btn-sm fw-bold">Move to
-                                                Cart</a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <a href="details.php">
-                                                <img src="assets/images/fashion/product/front/3.jpg" class="blur-up lazyload" alt="">
-                                            </a>
-                                        </td>
-                                        <td>
-                                            <p class="m-0">#125948</p>
-                                        </td>
-                                        <td>
-                                            <p class="fs-6 m-0">Men's Sweatshirt</p>
-                                        </td>
-                                        <td>
-                                            <p class="theme-color fs-6">$49.54</p>
-                                        </td>
-                                        <td>
-                                            <a href="cart.php" class="btn btn-solid-default btn-sm fw-bold">Move to
-                                                Cart</a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <a href="details.php">
-                                                <img src="assets/images/fashion/product/front/4.jpg" class="blur-up lazyload" alt="">
-                                            </a>
-                                        </td>
-                                        <td>
-                                            <p class="m-0">#127569</p>
-                                        </td>
-                                        <td>
-                                            <p class="fs-6 m-0">Men's Hoodie t-shirt</p>
-                                        </td>
-                                        <td>
-                                            <p class="theme-color fs-6">$49.54</p>
-                                        </td>
-                                        <td>
-                                            <a href="cart.php" class="btn btn-solid-default btn-sm fw-bold">Move to
-                                                Cart</a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <a href="details.php">
-                                                <img src="assets/images/fashion/product/front/5.jpg" class="blur-up lazyload" alt="">
-                                            </a>
-                                        </td>
-                                        <td>
-                                            <p class="m-0">#127569</p>
-                                        </td>
-                                        <td>
-                                            <p class="fs-6 m-0">Men's Hoodie t-shirt</p>
-                                        </td>
-                                        <td>
-                                            <p class="theme-color fs-6">$49.54</p>
-                                        </td>
-                                        <td>
-                                            <a href="cart.php" class="btn btn-solid-default btn-sm fw-bold">Move to
-                                                Cart</a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <a href="details.php">
-                                                <img src="assets/images/fashion/product/front/6.jpg" class="blur-up lazyload" alt="">
-                                            </a>
-                                        </td>
-                                        <td>
-                                            <p class="m-0">#125021</p>
-                                        </td>
-                                        <td>
-                                            <p class="fs-6 m-0">Men's Sweatshirt</p>
-                                        </td>
-                                        <td>
-                                            <p class="theme-color fs-6">$49.54</p>
-                                        </td>
-                                        <td>
-                                            <a href="cart.php" class="btn btn-solid-default btn-sm fw-bold">Move to
-                                                Cart</a>
-                                        </td>
-                                    </tr>
+                                    @endforeach
                                 </tbody>
                             </table>
                         </div>
