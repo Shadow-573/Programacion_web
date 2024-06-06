@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Category;
 use App\Models\Product;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
@@ -11,10 +12,11 @@ class AdminController extends Controller
     public function index(){
         $categories = Category::all();
         $products = Product::all();
-        return view("admin.index",compact("products","categories"));
+        $users = User::all();
+        return view("admin.index",compact("products","categories","users"));
     }
 
-   
+
     public function createProduct()
     {
         return view('admin.products.create');
@@ -48,6 +50,11 @@ class AdminController extends Controller
         $product->delete();
         return redirect()->route('admin.index')->with('success', 'Product deleted successfully');
     }
+
+
+
+
+
 
     public function createCategory()
     {
@@ -87,6 +94,51 @@ class AdminController extends Controller
 
         return redirect()->route('admin.index')->with('success', 'Categoría eliminada con éxito');
     }
+
+
+#-----------------------------------------------------------------------------------------------------------------------------------
+#////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+#-----------------------------------------------------------------------------------------------------------------------------------
+
+
+public function createUser()
+{
+    return view('admin.users.create');
+}
+
+// Método para almacenar una nueva categoría
+public function storeUser(Request $request){
+
+    $dataUser = $request->except(['_token', '_method']);
+
+    User::insert($dataUser);
+
+    return redirect()->route('admin.index')->with('success', 'Usuario creado con éxito');
+}
+
+// Método para mostrar el formulario de edición de categorías
+public function editUser($id)
+{
+    $user = User::findOrFail($id);
+    return view('admin.users.edit', compact('user'));
+}
+
+// Método para actualizar una categoría
+public function updateUser(Request $request, $id)
+{
+    $dataUser = $request->except(['_token', '_method']);
+    User::where('id', '=', $id)->update($dataUser);
+    return redirect()->route('admin.index')->with('success', 'Usuario actualizado con éxito');
+}
+
+// Método para eliminar una categoría
+public function destroyUser($id)
+{
+    $user = User::findOrFail($id);
+    $user->delete();
+
+    return redirect()->route('admin.index')->with('success', 'Usuario eliminado con éxito');
+}
 
 }
 
