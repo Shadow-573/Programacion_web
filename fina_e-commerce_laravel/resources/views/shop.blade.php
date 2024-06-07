@@ -251,7 +251,7 @@
                                         @endif
 
                                     </h3>
-                                    <button class="btn listing-content">Add To Cart</button>
+                                    <button class="btn listing-content" onclick="addProductToCart({{$product->id}}, 1)" class="cart">Add To Cart</button>
                                 </div>
                             </div>
                         </div>
@@ -353,14 +353,14 @@
                 quantity: quantity
             },
             success: function(data) {
-                if (data.status == 200) {
+
                     getCartAndWishListCount();
                     $.notify({
                         icon: "fa fa-check",
                         title: "Success!",
                         message: "Item succesfully added to your cart!"
                     });
-                }
+
             }
         });
     }

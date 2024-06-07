@@ -86,23 +86,23 @@
                             <h3>Products</h3>
                         </div>
                         <div class="table-responsive">
-                                <a href="{{route('admin.products.create')}}" class="btn btn-success float-right "> Add
+                                <a href="{{route('admin.products.create')}}" class="btn btn-success float-right ">
                         <i class="fas fa-plus "></i> <!-- Agrega el icono -->
-                        Product</a>
+                        Añadir Producto</a>
                             <table class="table cart-table">
                                 <thead>
                                     <tr class="table-head">
-                                        <th scope="col">Name</th>
-                                        <th scope="col">Slug</th>
-                                        <th scope="col">Description</th>
-                                        <th scope="col">Short Description</th>
-                                        <th scope="col">Sale Price</th>
-                                        <th scope="col">Regular Price</th>
-                                        <th scope="col">Stock Status</th>
-                                        <th scope="col">Quantity</th>
-                                        <th scope="col">Image</th>
-                                        <th scope="col">Category</th>
-                                        <th scope="col">Brand</th>
+                                        <th scope="col">Nombre</th>
+                                        <th scope="col">Eslogan</th>
+                                        <th scope="col">Descripción</th>
+                                        <th scope="col">Descripción Corta</th>
+                                        <th scope="col">Precio Descuento</th>
+                                        <th scope="col">Precio Regular</th>
+                                        <th scope="col">Estatus de Stock</th>
+                                        <th scope="col">Cantidad</th>
+                                        <th scope="col">Imagen</th>
+                                        <th scope="col">Categoria</th>
+                                        <th scope="col">Marca</th>
                                         <th>Actions</th>
 
                                     </tr>
@@ -118,7 +118,7 @@
                                         <td>{{ $product->regular_price }}</td>
                                         <td>{{ $product->stock_status }}</td>
                                         <td>{{ $product->quantity }}</td>
-                                        <td>{{ $product->image}}</td>
+                                        <td><img src="assets/images/fashion/product/front/{{$product->image}}" alt="a" width="64"></td>
                                         <td>{{ $product->category->name }}</td>
                                         <td>{{ $product->brand->name }}</td>
                                         <td>
@@ -148,15 +148,15 @@
                         <div class="table-responsive">
                         <a href="{{route('admin.categories.create')}}" class="btn btn-success float-right ">
                         <i class="fas fa-plus "></i> <!-- Agrega el icono -->
-                        Add Category</a>
+                        Añadir Categoria</a>
                             <table class="table cart-table">
                                 <thead>
                                     <tr class="table-head">
                                         <th scope="col">ID</th>
-                                        <th scope="col">Name</th>
-                                        <th scope="col">Slug</th>
-                                        <th scope="col">Image</th>
-                                        <th scope="col">Actions</th>
+                                        <th scope="col">Nombre</th>
+                                        <th scope="col">Eslogan</th>
+                                        <th scope="col">Imagen</th>
+                                        <th scope="col">Acciones</th>
 
                                     </tr>
                                 </thead>
@@ -192,12 +192,13 @@
                             <h3>Usuarios</h3>
                         </div>
                         <div class="table-responsive">
-                                <a href="{{route('admin.products.create')}}" class="btn btn-success float-right "> Añadir
+                                <a href="{{route('admin.users.create')}}" class="btn btn-success float-right ">
+                                <i class="fas fa-plus "></i> Añadir
                         Usuario </a>
                             <table class="table cart-table">
                                 <thead>
                                     <tr class="table-head">
-                                        <th scope="col">Name</th>
+                                        <th scope="col">Nombre</th>
                                         <th scope="col">Email</th>
                                         <th scope="col">Email verificado</th>
                                         <th scope="col">Rol</th>
@@ -205,24 +206,24 @@
                                         <th scope="col">actualizado el</th>
 
 
-                                        <th>Actions</th>
+                                        <th>Acciones</th>
 
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach ($products as $product)
+                                    @foreach ($users as $user)
                                     <tr>
-                                        <td>{{ $product->name }}</td>
-                                        <td>{{ $product->slug }}</td>
-                                        <td class="description">{{ $product->description }}</td>
-                                        <td class="description">{{ $product->short_description }}</td>
-                                        <td>{{ $product->sale_price }}</td>
-                                        <td>{{ $product->regular_price }}</td>
+                                        <td>{{ $user->name }}</td>
+                                        <td>{{ $user->email }}</td>
+                                        <td>{{ $user->email_verified_at }}</td>
+                                        <td>{{ $user->utype }}</td>
+                                        <td>{{ $user->created_at }}</td>
+                                        <td>{{ $user->updated_at }}</td>
                                         <td>
-                                            <a href="{{ route('admin.products.edit', ['id' => $product->id]) }}" class="btn btn-sm btn-primary action-btn">
+                                            <a href="{{ route('admin.users.edit', ['id' => $user->id]) }}" class="btn btn-sm btn-primary action-btn">
                                                 <i class="fas fa-edit"></i>
                                             </a>
-                                            <form action="{{ route('admin.products.destroy', ['id' => $product->id]) }}" method="POST" style="display:inline;">
+                                            <form action="{{ route('admin.users.destroy', ['id' => $user->id]) }}" method="POST" style="display:inline;">
                                                 @csrf
                                                 @method('DELETE')
                                                 <button type="submit" class="btn btn-sm btn-danger action-btn">

@@ -10,18 +10,23 @@
         </div>
 
         <div class="form-group">
-            <label for="slug">Email</label>
+            <label for="email">Email</label>
             <input type="text" class="form-control" id="email" name="email"  required>
         </div>
 
         <div class="form-group">
-            <label for="SKU">Email verificado</label>
-            <input type="text" class="form-control" id="email_verfied_at" name="email_ver"  required>
+            <label for="email_verified_at">Email verificado</label>
+            <input type="text" class="form-control" id="email_verified_at" name="email_verified_at">
         </div>
 
         <div class="form-group">
-            <label for="description">Rol</label>
-            <textarea class="form-control" id="utype" name="rol" required></textarea>
+            <label for="password">contraseña</label>
+            <input type="text" class="form-control" id="password" name="password" value="123456789">
+        </div>
+
+        <div class="form-group">
+            <label for="utype">Rol</label>
+            <textarea class="form-control" id="utype" name="utype" required></textarea>
         </div>
 
 

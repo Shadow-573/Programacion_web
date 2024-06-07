@@ -149,9 +149,8 @@
                                             </li>
                                             <li><a href="{{ route('app.index') }}" class="nav-link menu-title">Inicio</a></li>
                                             <li><a href="{{ route('shop.index') }}" class="nav-link menu-title">Tienda</a></li>
-                                            <li><a href="cart/list.html" class="nav-link menu-title">Carrito</a></li>
-                                            <li><a href="about-us.html" class="nav-link menu-title">Nosotros</a></li>
-                                            <li><a href="contact-us.html" class="nav-link menu-title">Contactenos</a>
+                                            <li><a href="{{ route('cart.index') }}" class="nav-link menu-title">Carrito</a></li>
+
                                             </li>
                                         </ul>
                                     </div>
@@ -174,7 +173,7 @@
                                             </a>
                                         </div>
                                     </li>
-                                    
+
                                         <li class="onhover-dropdown wislist-dropdown">
         <div class="cart-media">
             <a href="{{route('cart.index')}}">
@@ -228,7 +227,7 @@
                                 </ul>
                             </div>
                             <div class="search-full">
-                                <form method="GET" class="search-full" action="http://localhost:8000/search">
+                                <form method="GET" class="search-full" action="{{ route('shop.index') }}">
                                     <div class="input-group">
                                         <span class="input-group-text">
                                             <i data-feather="search" class="font-light"></i>
@@ -411,18 +410,6 @@
             <img src="{{asset('assets/images/iconos/mercado_logo.webp')}}" alt="Mercado Pago">
                             </div>
 
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-4 col-sm-6 d-none d-sm-block">
-                        <div class="footer-newsletter">
-                            <h3>Mantente conectado</h3>
-                            <div class="form-newsletter">
-                                <div class="input-group mb-4">
-                                    <input type="text" class="form-control color-4" placeholder="Tu correo electronico">
-                                    <span class="input-group-text" id="basic-addon4"><i
-                                            class="fas fa-arrow-right"></i></span>
-                                </div>
                             </div>
                         </div>
                     </div>

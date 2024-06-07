@@ -138,6 +138,7 @@
 
                                     <h6 class="product-title product-title-2 d-block">quantity</h6>
 
+                                    <form id="addtocart" method="post" action="{{route('cart.store')}}">
                                     <div class="qty-box">
                                         <div class="input-group">
                                             <span class="input-group-prepend">
@@ -159,19 +160,14 @@
                                 </div>
 
                                 <div class="product-buttons">
-                                    <a href="javascript:void(0)" class="btn btn-solid">
-                                        <i class="fa fa-bookmark fz-16 me-2"></i>
-                                        <span>Wishlist</span>
-                                    </a>
-                                    <a href="javascript:void(0)"
-                                        onclick="event.preventDefault();document.getElementById('addtocart').submit();"
-                                        id="cartEffect" class="btn btn-solid hover-solid btn-animation">
+
+                                    <a href="javascript:void(0)" id="cartEffect" onclick="event.preventDefault();document.getElementById('addtocart').submit();" class="btn btn-solid hover-solid btn-animation">
                                         <i class="fa fa-shopping-cart"></i>
                                         <span>Add To Cart</span>
-                                        <form id="addtocart" method="post" action="{{route('cart.store')}}">
+
                                             @csrf
                                             <input type="hidden" name="id" value="{{$product->id}}">
-                                            <input type="hidden" name="quantity" id="qty" value="1">
+
                                         </form>
                                     </a>
 

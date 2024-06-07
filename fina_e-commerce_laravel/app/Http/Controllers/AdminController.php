@@ -106,7 +106,7 @@ public function createUser()
     return view('admin.users.create');
 }
 
-// Método para almacenar una nueva categoría
+// Método para almacenar una nuevo usuario
 public function storeUser(Request $request){
 
     $dataUser = $request->except(['_token', '_method']);
@@ -116,14 +116,14 @@ public function storeUser(Request $request){
     return redirect()->route('admin.index')->with('success', 'Usuario creado con éxito');
 }
 
-// Método para mostrar el formulario de edición de categorías
+// Método para mostrar el formulario de edición de usuarios
 public function editUser($id)
 {
     $user = User::findOrFail($id);
     return view('admin.users.edit', compact('user'));
 }
 
-// Método para actualizar una categoría
+// Método para actualizar un usuarios
 public function updateUser(Request $request, $id)
 {
     $dataUser = $request->except(['_token', '_method']);
@@ -131,7 +131,7 @@ public function updateUser(Request $request, $id)
     return redirect()->route('admin.index')->with('success', 'Usuario actualizado con éxito');
 }
 
-// Método para eliminar una categoría
+// Método para eliminar un usuarios
 public function destroyUser($id)
 {
     $user = User::findOrFail($id);
