@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Audit;
 use App\Models\Category;
 use App\Models\Product;
 use App\Models\User;
@@ -13,7 +14,8 @@ class AdminController extends Controller
         $categories = Category::all();
         $products = Product::all();
         $users = User::all();
-        return view("admin.index",compact("products","categories","users"));
+        $audits = Audit::all();
+        return view("admin.index",compact("products","categories","users",'audits'));
     }
 
 
@@ -26,7 +28,16 @@ class AdminController extends Controller
     {
         $dataProduct = $request->except(['_token']);
 
-        Product::insert($dataProduct);
+        $product = Product::create($dataProduct);
+
+
+        Audit::create([
+            'action' => 'create',
+            'auditable_type' => Product::class,
+            'auditable_id' => $product->id,
+            'new_values' => json_encode($dataProduct)
+        ]);
+
         return redirect()->route('admin.index')->with('success', 'Product created successfully');
     }
 
@@ -40,14 +51,33 @@ class AdminController extends Controller
     {
 
         $dataProduct = $request->except(['_token', '_method']);
+        $oldProduct = Product::find($id)->toArray();
         Product::where('id', '=', $id)->update($dataProduct);
+
+        Audit::create([
+            'action' => 'update',
+            'auditable_type' => Product::class,
+            'auditable_id' => $id,
+            'old_values' => json_encode($oldProduct),
+            'new_values' => json_encode($dataProduct)
+        ]);
+
         return redirect()->route('admin.index')->with('success', 'Product updated successfully');
     }
 
     public function destroyProduct($id)
     {
         $product = Product::find($id);
+        $oldProduct = $product->toArray();
         $product->delete();
+
+        Audit::create([
+            'action' => 'delete',
+            'auditable_type' => Product::class,
+            'auditable_id' => $id,
+            'old_values' => json_encode($oldProduct)
+        ]);
+
         return redirect()->route('admin.index')->with('success', 'Product deleted successfully');
     }
 

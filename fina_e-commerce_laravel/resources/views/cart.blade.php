@@ -129,7 +129,7 @@
 
                     <div class="col-lg-4 col-sm-6 ">
                         <div class="checkout-button">
-                            <a href="checkout" class="btn btn-solid-default btn fw-bold">
+                            <a href="{{ route('checkout.index')}}" class="btn btn-solid-default btn fw-bold">
                                 Check Out <i class="fas fa-arrow-right ms-1"></i></a>
                         </div>
                     </div>
@@ -145,7 +145,13 @@
                                         <h6>Total <span>${{Cart::instance('cart')->total()}}</span></h6>
                                     </div>
                                     <div class="bottom-details">
-                                        <a href="checkout">Process Checkout</a>
+
+                                        @auth
+                                        <a href="{{ route('checkout.index')}}">Process Checkout</a>
+
+                                        @else
+                                        <a href="{{ route('user.index')}}">Process Checkout</a>
+                                        @endauth
                                     </div>
                                 </div>
                             </div>

@@ -14,9 +14,7 @@
             <label for="slug">Slug</label>
             <input type="text" class="form-control" id="slug" name="slug" value="{{ $category->slug }}" required>
         </div>
-
         
-
         <div class="form-group">
             <label for="image">Image</label>
             <input type="text" class="form-control" id="image" name="image" value="{{ $category->image ?? '' }}" required>
