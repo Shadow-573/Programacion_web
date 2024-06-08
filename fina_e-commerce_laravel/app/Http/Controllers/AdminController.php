@@ -31,11 +31,13 @@ class AdminController extends Controller
         $product = Product::create($dataProduct);
 
 
+
         Audit::create([
             'action' => 'create',
             'auditable_type' => Product::class,
             'auditable_id' => $product->id,
             'new_values' => json_encode($dataProduct)
+
         ]);
 
         return redirect()->route('admin.index')->with('success', 'Product created successfully');
@@ -96,7 +98,15 @@ class AdminController extends Controller
 
         $dataProduct = $request->except(['_token', '_method']);
 
-        Category::insert($dataProduct);
+        $category = Category::create($dataProduct);
+
+        Audit::create([
+            'action' => 'create',
+            'auditable_type' => Category::class,
+            'auditable_id' => $category->id,
+            'new_values' => json_encode($dataProduct)
+
+        ]);
 
         return redirect()->route('admin.index')->with('success', 'Categoría creada con éxito');
     }
@@ -112,7 +122,17 @@ class AdminController extends Controller
     public function updateCategory(Request $request, $id)
     {
         $dataCategory = $request->except(['_token', '_method']);
+        $oldCategory = Category::find( $id)->toArray();
         Category::where('id', '=', $id)->update($dataCategory);
+
+        Audit::create([
+            'action' => 'update',
+            'auditable_type' => Category::class,
+            'auditable_id' => $id,
+            'old_values' => json_encode($oldCategory),
+            'new_values' => json_encode($dataCategory)
+        ]);
+
         return redirect()->route('admin.index')->with('success', 'Product updated successfully');
     }
 
@@ -120,7 +140,15 @@ class AdminController extends Controller
     public function destroyCategory($id)
     {
         $category = Category::findOrFail($id);
+        $oldCategory = $category->toArray();
         $category->delete();
+
+        Audit::create([
+            'action' => 'delete',
+            'auditable_type' => Category::class,
+            'auditable_id' => $id,
+            'old_values' => json_encode($oldCategory)
+        ]);
 
         return redirect()->route('admin.index')->with('success', 'Categoría eliminada con éxito');
     }
@@ -141,7 +169,15 @@ public function storeUser(Request $request){
 
     $dataUser = $request->except(['_token', '_method']);
 
-    User::insert($dataUser);
+    $user = User::create($dataUser);
+
+    Audit::create([
+        'action' => 'create',
+        'auditable_type' => User::class,
+        'auditable_id' => $user->id,
+        'new_values' => json_encode($dataUser)
+
+    ]);
 
     return redirect()->route('admin.index')->with('success', 'Usuario creado con éxito');
 }
@@ -157,7 +193,17 @@ public function editUser($id)
 public function updateUser(Request $request, $id)
 {
     $dataUser = $request->except(['_token', '_method']);
+    $oldUser = User::find( $id )->toArray();
     User::where('id', '=', $id)->update($dataUser);
+
+    Audit::create([
+        'action' => 'update',
+        'auditable_type' => User::class,
+        'auditable_id' => $id,
+        'old_values' => json_encode($oldUser),
+        'new_values' => json_encode($dataUser)
+    ]);
+
     return redirect()->route('admin.index')->with('success', 'Usuario actualizado con éxito');
 }
 
@@ -165,7 +211,15 @@ public function updateUser(Request $request, $id)
 public function destroyUser($id)
 {
     $user = User::findOrFail($id);
+    $oldUser = $user->toArray();
     $user->delete();
+
+    Audit::create([
+        'action' => 'delete',
+        'auditable_type' => User::class,
+        'auditable_id' => $id,
+        'old_values' => json_encode($oldUser)
+    ]);
 
     return redirect()->route('admin.index')->with('success', 'Usuario eliminado con éxito');
 }

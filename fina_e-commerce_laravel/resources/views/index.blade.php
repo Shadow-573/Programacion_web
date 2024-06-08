@@ -1,6 +1,6 @@
 @extends('layouts.base')
 @section('content')
-<section class="pt-0 poster-section">
+<section class="pt-0 poster-section" id="index">
         <div class="poster-image slider-for custome-arrow classic-arrow">
 
         @foreach ($xproducts as $xproduct )
@@ -12,7 +12,7 @@
             @endforeach
 
         </div>
-        <div class="slider-nav image-show">
+        <div class="slider-nav image-show" >
             @foreach ($xproducts as $xproduct)
 
             <div>
@@ -32,8 +32,6 @@
                 <h4>A la <span class="theme-color">Venta!!!</span></h4>
                 <h1>LOS ULTIMOS <span>PELUCHES</span></h1>
                 <p>COMPRALO YA! <span class="theme-color">SE VENDEN COMO PAN CALIENTE</span></p>
-                <p class="poster-details mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting
-                    industry.</p>
             </div>
         </div>
     </section>

@@ -302,7 +302,7 @@
 
     <div id="qvmodal"></div>
 
-    <footer class="footer-sm-space mt-5">
+    <footer class="footer-sm-space mt-5" id="contactenos">
         <div class="main-footer">
             <div class="container">
                 <div class="row gy-4">
@@ -341,19 +341,13 @@
                             <div class="footer-content">
                                 <ul>
                                     <li>
-                                        <a href="index.htm" class="font-dark">Inicio</a>
+                                        <a href="#index" class="font-dark">Inicio</a>
                                     </li>
                                     <li>
-                                        <a href="shop.html" class="font-dark">Tienda</a>
+                                        <a href="{{ route('shop.index') }}" class="font-dark">Tienda</a>
                                     </li>
                                     <li>
-                                        <a href="about-us.html" class="font-dark">Sobre nosotros</a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="font-dark">Blog</a>
-                                    </li>
-                                    <li>
-                                        <a href="contact-us.html" class="font-dark">Contactenos</a>
+                                        <a href="#contactenos" class="font-dark">Contactenos</a>
                                     </li>
                                 </ul>
                             </div>
@@ -367,19 +361,19 @@
                             <div class="footer-content">
                                 <ul>
                                     <li>
-                                        <a href="shop.html" class="font-dark">Ultimos peluches</a>
+                                        <a href="{{ route('shop.index') }}" class="font-dark">Ultimos peluches</a>
                                     </li>
                                     <li>
-                                        <a href="shop.html" class="font-dark">Peluches originales</a>
+                                        <a href="{{ route('shop.index') }}" class="font-dark">Peluches originales</a>
                                     </li>
                                     <li>
-                                        <a href="shop.html" class="font-dark">Los más vendidos</a>
+                                        <a href="{{ route('shop.index') }}" class="font-dark">Los más vendidos</a>
                                     </li>
                                     <li>
-                                        <a href="shop.html" class="font-dark">Anime</a>
+                                        <a href="{{ route('shop.index') }}" class="font-dark">Anime</a>
                                     </li>
                                     <li>
-                                        <a href="shop.html" class="font-dark">Series animadas</a>
+                                        <a href="{{ route('shop.index') }}" class="font-dark">Series animadas</a>
                                     </li>
                                 </ul>
                             </div>
